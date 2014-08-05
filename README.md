@@ -1,0 +1,1 @@
+Projeto para estudo do framework Grails 2.4.0. Site para rastreio de objetos no webservice dos correios. Envia e-mail em cada alteração de status, guarda as infromações em banco de dados pois o site dos correios só guarda o rastreio durante 3 meses após a entrega e em breve implementarei o envio de SMS. 
