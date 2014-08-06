@@ -109,13 +109,14 @@ class MuambaController extends BaseController {
 				it.muambas.each(){
 									
 							Muamba muambaInstance = it
+							
 							def dataultimostatus  = muambaInstance.dataultimostatus
 							
 							muambaInstance.dataultimaatualizacao=new Date()
 							muambaInstance.save flush:true
 														
 							if (muambaInstance.hasErrors()) {
-									respond muambaInstance.errors, view:'index'
+									respond muambaInstance.errors, view:'atualizastatus'
 									return
 							}
 							
@@ -163,7 +164,7 @@ class MuambaController extends BaseController {
 													muambaInstance.save flush:true
 																			
 													if (muambaInstance.hasErrors()) {
-														respond muambaInstance.errors, view:'index'
+														respond muambaInstance.errors, view:'atualizastatus'
 														return
 													}
 												}
@@ -173,7 +174,7 @@ class MuambaController extends BaseController {
 													muambaInstance.save flush:true
 														
 													if (muambaInstance.hasErrors()) {
-														respond muambaInstance.errors, view:'create'
+														respond muambaInstance.errors, view:'atualizastatus'
 														return
 													}
 													
@@ -192,7 +193,7 @@ class MuambaController extends BaseController {
 													historicomuamba.save flush:true
 													
 													if (historicomuamba.hasErrors()) {
-														respond historicomuamba.errors, view:'index'
+														respond historicomuamba.errors, view:'atualizastatus'
 														return
 													}
 												}
@@ -223,11 +224,10 @@ class MuambaController extends BaseController {
 															}
 														
 															muambaInstance.dataultimoenvioemail = datahoradt
-															muambaInstance.dataultimostatus 	= datahoradt
 															muambaInstance.save flush:true
 																					
 															if (muambaInstance.hasErrors()) {
-																respond muambaInstance.errors, view:'index'
+																respond muambaInstance.errors, view:'atualizastatus'
 																return
 															}
 														}
