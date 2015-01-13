@@ -10,7 +10,7 @@
 		<asset:stylesheet src="datepicker.css"/>
 	</head>
 	<body>
-	
+
 		
 		<a href="#list-muamba" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="list-muamba" class="content scaffold-list" role="main">

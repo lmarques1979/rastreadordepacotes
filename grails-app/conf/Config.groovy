@@ -18,7 +18,7 @@ grails.cache.enabled = false
 
 //Dados Tomcat Deploy
 tomcat.deploy.username="admin"
-tomcat.deploy.password=""
+tomcat.deploy.password="99157521"
 tomcat.deploy.url="http://localhost:8080/manager/text"
 grails.tomcat.jvmArgs = ["-server", "-XX:MaxPermSize=512m", "-XX:MaxNewSize=256m", "-XX:NewSize=256m",
  "-Xms768m", "-Xmx1024m", "-XX:SurvivorRatio=128", "-XX:MaxTenuringThsreshold=0",
@@ -113,7 +113,7 @@ grails {
 	  host = "smtp.gmail.com"
 	  port = 465
 	  username = "rastreadorpacotes@gmail.com"
-	  password = ""
+	  password = "rastreador01"
 	  props = ["mail.smtp.auth":"true",
 			   "mail.smtp.socketFactory.port":"465",
 			   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
@@ -135,10 +135,14 @@ grails.plugin.springsecurity.useBasicAuth = true
 //grails.plugin.springsecurity.successHandler.defaultTargetUrl='/muamba/visualiza'
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':               			['permitAll'],
-	'/index':          			['permitAll'],
-	'/index.gsp':      			['permitAll'],
-	'/assets/**':				['permitAll']
+	'/':               	['permitAll'],
+	'/index':          	['permitAll'],
+	'/index.gsp':      	['permitAll'],
+	'/assets/**':      	['permitAll'],
+   '/**/js/**':       	['permitAll'],
+   '/**/css/**':      	['permitAll'],
+   '/**/images/**':   	['permitAll'],
+   '/**/favicon.ico': 	['permitAll']
  ]
 
 // log4j configuration
@@ -164,3 +168,5 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+//grailsApplication.config.urlsite nas views
+urlsite='http://marquesapps.epac.to:8080/rastreadordepacotes/'
